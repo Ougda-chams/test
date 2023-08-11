@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ProjetDSL" nsURI="http:///ProjetDSL.ecore" nsPrefix="ProjetDSL">
+  <eSubpackages name="_" nsURI="http:///ProjetDSL/_.ecore" nsPrefix="ProjetDSL._"/>
+  <eSubpackages name="ProfilSimulation" nsURI="http:///ProjetDSL/ProfilSimulation.ecore"
+      nsPrefix="ProjetDSL.ProfilSimulation">
+    <eClassifiers xsi:type="ecore:EClass" name="Simulation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idSimulation" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="EndDate" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idScenario" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="scenarioName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Model">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idModel" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Variable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeVariable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Output">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idOutput" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeOutput" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeParameter" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialValue" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Parameter" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InitialBlock">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idInitialBlock" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialBlockName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GlobalBlock">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idGlobalBlock" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="globalBlockName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IndividualOutput" eSuperTypes="#//ProfilSimulation/Output">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idIndividualOutput" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="individualOutputName"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeIndividualOutput"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GlobalOutput" eSuperTypes="#//ProfilSimulation/Output">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idGlobalOutput" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="globalOutputName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeGlobalOutput" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SpatialEnvironment" eSuperTypes="#//ProfilSimulation/Variable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="spatialEnvironmentName"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueSpatialEnvironment"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StateVariable" eSuperTypes="#//ProfilSimulation/Variable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="stateVariableName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueStateVariable" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GlobalVariable" eSuperTypes="#//ProfilSimulation/Variable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="globalVariableName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueGlobalVariable"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="ProfilAgroecosystem" nsURI="http:///ProjetDSL/ProfilAgroecosystem.ecore"
+      nsPrefix="ProjetDSL.ProfilAgroecosystem">
+    <eClassifiers xsi:type="ecore:EClass" name="Agroecosystem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Peasant">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPeasant" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="peasantName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Asset">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idAsset" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="assetName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeAsset" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Farm">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idFarm" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="farmName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeFarm" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rotation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="rotationName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateRotation" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Plot">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPlot" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="plotName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Crop">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idCrop" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="cropName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeCrop" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="yield" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateCrop" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="area" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Weather">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idWeather" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="weatherName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="probability" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FarmingCalendar">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="farmingCalendarName"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AgentClimate" eSuperTypes="#//ProfilAgroecosystem/Weather">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idAgentClimate" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="agentClimateName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Organisation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="organizationName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Operation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operationName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Activity" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Time">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="day" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="month" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Plant" eSuperTypes="#//ProfilAgroecosystem/Operation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Fertilize" eSuperTypes="#//ProfilAgroecosystem/Operation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Cultivate" eSuperTypes="#//ProfilAgroecosystem/Peasant"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Irrigation" eSuperTypes="#//ProfilAgroecosystem/Operation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeIrrigation" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Harvest" eSuperTypes="#//ProfilAgroecosystem/Peasant"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Transporte" eSuperTypes="#//ProfilAgroecosystem/Peasant"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Clear" eSuperTypes="#//ProfilAgroecosystem/Operation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="clearType" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Buy" eSuperTypes="#//ProfilAgroecosystem/Peasant"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Sell" eSuperTypes="#//ProfilAgroecosystem/Peasant"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Stock" eSuperTypes="#//ProfilAgroecosystem/Peasant"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Transport" eSuperTypes="#//ProfilAgroecosystem/Operation"/>
+  </eSubpackages>
+  <eSubpackages name="ProfilAgent" nsURI="http:///ProjetDSL/ProfilAgent.ecore" nsPrefix="ProjetDSL.ProfilAgent">
+    <eClassifiers xsi:type="ecore:EClass" name="Ressource">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idRessource" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ressourceName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeRessource" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Agent">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idAgent" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="agentName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Object">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idObject" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Cell">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idCell" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="connectivity" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//ProfilAgent/Cell">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lengthLocation" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="widthLocation" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Event">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Action">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idAction" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Action" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Action"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Behaviour">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idBehaviour" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="behaviourName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Behavior" ordered="false"
+          eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//Behavior"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Deal" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Live" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Perseve" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Move" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Migrate" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="GetRessource" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ShareRessource" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="GetInformation" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UseRessource" eSuperTypes="#//ProfilAgent/Behaviour"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ShareInformation" eSuperTypes="#//ProfilAgent/Behaviour"/>
+  </eSubpackages>
+</ecore:EPackage>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/ProjetDSL/src" modelPluginID="ProjetDSL" modelName="DSML"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../org.eclipse.uml2.types/model/Types.genmodel#//types ../org.eclipse.uml2.uml/model/UML.genmodel#//uml"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>ProjetDSL.profile.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="ProjetDSL" disposableProviderFactory="true"
+      ecorePackage="ProjetDSL.ecore#/">
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="_" basePackage="ProjetDSL"
+        disposableProviderFactory="true" ecorePackage="ProjetDSL.ecore#//_"/>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="ProfilSimulation" basePackage="ProjetDSL"
+        disposableProviderFactory="true" ecorePackage="ProjetDSL.ecore#//ProfilSimulation">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/Simulation">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Simulation/idSimulation"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Simulation/startDate"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Simulation/EndDate"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/Simulation/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/Scenario">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Scenario/idScenario"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Scenario/scenarioName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/Scenario/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/Model">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Model/idModel"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Model/modelName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/Model/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/Variable">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Variable/variableName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Variable/typeVariable"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/Variable/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/Output">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Output/idOutput"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Output/outputName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Output/typeOutput"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/Output/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/Parameter">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Parameter/parameterName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Parameter/typeParameter"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/Parameter/initialValue"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/Parameter/base_Parameter"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/InitialBlock">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/InitialBlock/idInitialBlock"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/InitialBlock/initialBlockName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/InitialBlock/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/GlobalBlock">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/GlobalBlock/idGlobalBlock"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/GlobalBlock/globalBlockName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/GlobalBlock/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/IndividualOutput">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/IndividualOutput/idIndividualOutput"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/IndividualOutput/individualOutputName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/IndividualOutput/typeIndividualOutput"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/IndividualOutput/base_Property"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/GlobalOutput">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/GlobalOutput/idGlobalOutput"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/GlobalOutput/globalOutputName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/GlobalOutput/typeGlobalOutput"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/GlobalOutput/base_Property"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/SpatialEnvironment">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/SpatialEnvironment/spatialEnvironmentName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/SpatialEnvironment/valueSpatialEnvironment"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/SpatialEnvironment/base_Property"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/StateVariable">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/StateVariable/stateVariableName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/StateVariable/valueStateVariable"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/StateVariable/base_Property"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilSimulation/GlobalVariable">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/GlobalVariable/globalVariableName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilSimulation/GlobalVariable/valueGlobalVariable"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilSimulation/GlobalVariable/base_Property"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="ProfilAgroecosystem"
+        basePackage="ProjetDSL" disposableProviderFactory="true" ecorePackage="ProjetDSL.ecore#//ProfilAgroecosystem">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Agroecosystem">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Agroecosystem/base_Package"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Peasant">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Peasant/idPeasant"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Peasant/peasantName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Peasant/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Asset">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Asset/idAsset"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Asset/assetName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Asset/typeAsset"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Asset/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Farm">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Farm/idFarm"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Farm/farmName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Farm/typeFarm"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Farm/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Rotation">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Rotation/rotationName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Rotation/dateRotation"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Rotation/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Plot">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Plot/idPlot"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Plot/plotName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Plot/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Crop">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Crop/idCrop"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Crop/cropName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Crop/typeCrop"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Crop/yield"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Crop/dateCrop"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Crop/area"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Crop/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Weather">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Weather/idWeather"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Weather/weatherName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Weather/probability"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Weather/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/FarmingCalendar">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/FarmingCalendar/farmingCalendarName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/FarmingCalendar/year"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/FarmingCalendar/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/AgentClimate">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/AgentClimate/idAgentClimate"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/AgentClimate/agentClimateName"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Organisation">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Organisation/organizationName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Organisation/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Operation">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Operation/operationName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Operation/base_Activity"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Time">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgroecosystem/Time/base_Class"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Time/day"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Time/month"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Time/year"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Plant"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Fertilize"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Cultivate"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Irrigation">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Irrigation/typeIrrigation"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Harvest"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Transporte"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Clear">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgroecosystem/Clear/clearType"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Buy"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Sell"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Stock"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgroecosystem/Transport"/>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="ProfilAgent" basePackage="ProjetDSL"
+        disposableProviderFactory="true" ecorePackage="ProjetDSL.ecore#//ProfilAgent">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Ressource">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Ressource/idRessource"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Ressource/ressourceName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Ressource/typeRessource"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgent/Ressource/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Agent">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Agent/idAgent"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Agent/agentName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgent/Agent/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Object">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Object/idObject"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Object/objectName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgent/Object/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Cell">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Cell/idCell"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Cell/length"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Cell/width"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Cell/connectivity"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgent/Cell/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Location">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Location/lengthLocation"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Location/widthLocation"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Event">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Event/eventName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgent/Event/base_Class"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Action">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Action/idAction"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Action/actionName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgent/Action/base_Action"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Behaviour">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Behaviour/idBehaviour"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ProjetDSL.ecore#//ProfilAgent/Behaviour/behaviourName"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ProjetDSL.ecore#//ProfilAgent/Behaviour/base_Behavior"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Deal"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Live"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Perseve"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Move"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/Migrate"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/GetRessource"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/ShareRessource"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/GetInformation"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/UseRessource"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ProjetDSL.ecore#//ProfilAgent/ShareInformation"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
